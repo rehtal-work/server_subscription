@@ -25,5 +25,5 @@ python generate_vmess.py $HOST_NAME > $HOST_NAME
 
 # 更新git
 git add -A
-git commit -m "$HOST_NAME auto update: $(date +'%Y-%m-%d %H:%M:%S')"
+git commit -m "$HOST_NAME auto update: $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')"
 git push
