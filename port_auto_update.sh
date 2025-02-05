@@ -24,4 +24,3 @@ python generate_vmess.py $HOST_NAME > $HOST_NAME
 git add -A
 git commit -m "$HOST_NAME auto update: $(date +'%Y-%m-%d %H:%M:%S')"
 git push
-"
