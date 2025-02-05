@@ -17,6 +17,9 @@ sudo jq --arg new_port "$NEW_PORT" '.inbounds[0].port = ($new_port | tonumber)' 
 sudo systemctl restart v2ray
 echo "V2Ray restarted with new port: $NEW_PORT"
 
+# 开始更新订阅
+cd /root/server_subscription
+
 # 生成vmess订阅地址
 python generate_vmess.py $HOST_NAME > $HOST_NAME
 
