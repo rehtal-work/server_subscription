@@ -29,6 +29,7 @@ cd /root/server_subscription
 python generate_vmess.py $HOST_NAME > $HOST_NAME
 
 # 更新git
+git pull
 git add -A
 git commit -m "$HOST_NAME auto update: $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')"
 git push
