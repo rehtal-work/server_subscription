@@ -33,3 +33,7 @@ git pull
 git add -A
 git commit -m "$HOST_NAME auto update: $(TZ=UTC-8 date +'%Y-%m-%d %H:%M:%S')"
 git push
+
+# 等待git更新完成后，强制更新cdn
+sleep 30
+https://purge.jsdelivr.net/gh/rehtal-work/server_subscription@master/$HOST_NAME
